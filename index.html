@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xây dựng lớp hình chữ nhật</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="1568px" height="800px"  style="border:1px solid #d3d3d3;"></canvas>
+
+
+
+    <script>
+        class Rectangle{
+            x;
+            y;
+            wid;
+            hei;
+            constructor (x,y,wid,hei){
+                this.x = x;
+                this.y = y;
+                this.wid = wid;
+                this.hei = hei;
+
+            }
+
+            getWidth(){
+                return this.wid;
+            }
+            getHeight(){
+                return this.hei;
+            }
+            getPerimeter(){
+                return (this.wid + this.hei)*2;
+            }
+            getArea(){
+                return this.wid * this.hei;
+            }
+        }
+
+
+        function createRectangle(){
+            let c = document.getElementById('myCanvas');
+            let ctx = c.getContext("2d");
+            let rec = new Rectangle(200,20,500,250
+            );
+            
+        console.log(rec);
+            ctx.beginPath();
+            ctx.fillRect(rec.x,rec.y,rec.wid,rec.hei);
+            ctx.stroke;
+            console.log(rec.getArea());
+        console.log(rec.getPerimeter());
+            
+        }
+
+        createRectangle();
+        
+        
+        
+     
+    </script>
+</body>
+</html>
